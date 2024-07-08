@@ -1,5 +1,7 @@
-// focus the cursor on the email-address input
+// Focus the cursor on the email address input field without scrolling the page
 const emailField = document.getElementById("email-address-input");
-emailField.focus({
-  preventScroll: true,
-});
+if (emailField) {
+    emailField.focus({ preventScroll: true });
+} else {
+    console.warn("Email address input field not found.");
+}
